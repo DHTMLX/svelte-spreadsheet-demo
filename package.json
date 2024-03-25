@@ -1,5 +1,5 @@
 {
-  "name": "dhx-svelte-starter",
+  "name": "svelte-spreadsheet-demo",
   "version": "1.0.0",
   "type": "module",
   "devDependencies": {
@@ -12,7 +12,7 @@
     "sirv-cli": "^2.0.2"
   },
   "dependencies": {
-    "@dhx/trial-spreadsheet": "^5.0.8",
+    "@dhx/trial-spreadsheet": "^5.1.5",
     "rollup-plugin-css-only": "^4.3.0",
     "svelte": "^3.59.2"
   },
