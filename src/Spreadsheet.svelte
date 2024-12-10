@@ -1,20 +1,21 @@
 <script>
-    import { onMount } from "svelte";
-    
+    import { onMount, onDestroy } from "svelte";
     import { Spreadsheet } from "@dhx/trial-spreadsheet";
     import "@dhx/trial-spreadsheet/codebase/spreadsheet.min.css"
     
     export let data;
 
-    let spreadsheet;
     let container;
+    let spreadsheet;
+    
     onMount(() => {
         spreadsheet = new Spreadsheet(container, {});
-        spreadsheet.events.on("ActionName", () => {})
+        spreadsheet.parse(data);
     });
 
-    $: spreadsheet?.parse(data);
+    onDestroy(() => {
+        spreadsheet.destructor();
+    });
 </script>
 
-<div bind:this={container} style="width: 100%; height: 100%;"></div>
-
+<div bind:this={container} class="widget"></div>

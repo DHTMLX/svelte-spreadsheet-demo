@@ -1,0 +1,13 @@
+/* specify styles for initial page */
+html,
+body,
+#app { /* make sure that you use the #app root container */
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* specify styles for the Spreadsheet container */
+.widget {
+  height: 100%;
+}
